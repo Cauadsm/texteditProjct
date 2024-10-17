@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Editor de Texto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h1 class="shadow-sm">EDITOR DE TEXTO</h1>
+        <div class="flex-box">
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="document.execCommand('bold');" class="btn btn-outline-secondary">Negrito</button>
+                    <button type="button" onclick="document.execCommand('italic');" class="btn btn-outline-success">Itálico</button>
+                    <button type="button" onclick="document.execCommand('justifyLeft');" class="btn btn-outline-primary"><i class="fas fa-align-left"></i></button>
+                    <button type="button" onclick="document.execCommand('justifyCenter');" class="btn btn-outline-secondary"><i class="fas fa-align-center"></i></button>
+                    <button type="button" onclick="document.execCommand('justifyRight');" class="btn btn-outline-primary"><i class="fas fa-align-right"></i></button>
+                    <button type="button" onclick="clearContent();" class="btn btn-outline-danger">Limpar tudo</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3 col-sm-3"></div>
+            <div class="col-md-6 col-sm-9">
+                <div id="container" class="flex-box">
+                    
+                </div>
+                <button id="generatePdf" class="btn btn-primary">Gerar PDF</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <script>
+        function clearContent() {
+            const container = document.getElementById('container');
+            const divs = container.querySelectorAll('.input');
+            divs.forEach(div => {
+                div.innerHTML = ''; // Limpa o conteúdo de cada div
+            });
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="formatoFolha.js" defer></script>
+    <script src="genPDF.js" defer></script>
+
+</body>
+
+<footer>
+    <h6 style="text-align:center;">Todos os direitos reservados. <a target="_blank" href="https://github.com/cauadsm">Cauã Silva de Moraes</a></h6>
+</footer>
+
+</html>

@@ -1,0 +1,103 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Garante que o body ocupe pelo menos a altura da tela */
+}
+
+footer {
+    color: black;
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    /* Cor de fundo opcional */
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: #0e5c1f;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+section {
+    padding: 5%;
+    padding-top: 0;
+    flex: 1;
+    /* Permite que a seção cresça para ocupar espaço disponível */
+}
+
+.side {
+    margin-left: 0;
+}
+
+button {
+    margin: 10px;
+    border-color: #00ff40;
+    color: #888888;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #fec8d8;
+}
+
+textarea {
+    padding: 3%;
+    border-color: #0e5c1f;
+    border-width: thick;
+    width: 100%;
+    /* Faz com que o textarea ocupe toda a largura disponível */
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* Empilha os itens verticalmente */
+}
+
+/* Modificando a barra de scroll */
+
+textarea::-webkit-scrollbar {
+    width: 15px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #0e5c1f;
+    border-radius: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #00ff40;
+    cursor: pointer;
+}
+
+#a4Size {
+    width: 210mm;
+    /* Largura A4 */
+    height: 297mm;
+    /* Altura A4 */
+    /* Bordas visíveis para a div */
+    padding: 10px;
+    /* Espaçamento interno */
+    overflow: auto;
+    /* Permitir rolagem se o conteúdo for maior */
+    margin: 0 auto;
+}
+
